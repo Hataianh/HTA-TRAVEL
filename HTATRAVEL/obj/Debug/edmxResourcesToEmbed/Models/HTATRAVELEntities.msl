@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HTATravelModelStoreContainer" CdmEntityContainer="HTATravelEntities">
+    <EntitySetMapping Name="Tin">
+      <EntityTypeMapping TypeName="HTATravelModel.Tin">
+        <MappingFragment StoreEntitySet="Tin">
+          <ScalarProperty Name="MaTin" ColumnName="MaTin" />
+          <ScalarProperty Name="Tieude" ColumnName="Tieude" />
+          <ScalarProperty Name="Anh1" ColumnName="Anh1" />
+          <ScalarProperty Name="Anh2" ColumnName="Anh2" />
+          <ScalarProperty Name="Anh3" ColumnName="Anh3" />
+          <ScalarProperty Name="Anh4" ColumnName="Anh4" />
+          <ScalarProperty Name="Anh5" ColumnName="Anh5" />
+          <ScalarProperty Name="Ngaydang" ColumnName="Ngaydang" />
+          <ScalarProperty Name="Luotxem" ColumnName="Luotxem" />
+          <ScalarProperty Name="Noidung" ColumnName="Noidung" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tour">
+      <EntityTypeMapping TypeName="HTATravelModel.Tour">
+        <MappingFragment StoreEntitySet="Tour">
+          <ScalarProperty Name="MaVN" ColumnName="MaVN" />
+          <ScalarProperty Name="TenVN" ColumnName="TenVN" />
+          <ScalarProperty Name="Anh1" ColumnName="Anh1" />
+          <ScalarProperty Name="Anh2" ColumnName="Anh2" />
+          <ScalarProperty Name="Anh3" ColumnName="Anh3" />
+          <ScalarProperty Name="Anh4" ColumnName="Anh4" />
+          <ScalarProperty Name="Anh5" ColumnName="Anh5" />
+          <ScalarProperty Name="Giasale" ColumnName="Giasale" />
+          <ScalarProperty Name="Giagoc" ColumnName="Giagoc" />
+          <ScalarProperty Name="Luotxem" ColumnName="Luotxem" />
+          <ScalarProperty Name="Chuongtrinh" ColumnName="Chuongtrinh" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TourQT">
+      <EntityTypeMapping TypeName="HTATravelModel.TourQT">
+        <MappingFragment StoreEntitySet="TourQT">
+          <ScalarProperty Name="MaQT" ColumnName="MaQT" />
+          <ScalarProperty Name="TenQT" ColumnName="TenQT" />
+          <ScalarProperty Name="Anh1" ColumnName="Anh1" />
+          <ScalarProperty Name="Anh2" ColumnName="Anh2" />
+          <ScalarProperty Name="Anh3" ColumnName="Anh3" />
+          <ScalarProperty Name="Anh4" ColumnName="Anh4" />
+          <ScalarProperty Name="Anh5" ColumnName="Anh5" />
+          <ScalarProperty Name="Giasale" ColumnName="Giasale" />
+          <ScalarProperty Name="Giagoc" ColumnName="Giagoc" />
+          <ScalarProperty Name="Luotxem" ColumnName="Luotxem" />
+          <ScalarProperty Name="Chuongtrinh" ColumnName="Chuongtrinh" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="HTATravelModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="MaNguoiDung" ColumnName="MaNguoiDung" />
+          <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

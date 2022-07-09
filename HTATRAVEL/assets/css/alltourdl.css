@@ -1,0 +1,130 @@
+.h2 {
+    color: rgb(68, 68, 68);
+    font-size: 28px;
+    text-shadow: 0.5px 0.5px 1px rgb(58, 58, 58);
+    text-align: center;
+}
+
+.ab {
+    height: 450px;
+    float: left;
+    background-color: blue;
+}
+
+.albuml {
+    border: 0px solid rgb(102, 102, 102, 0.1);
+    height: 450px;
+    float: left;
+    overflow: hidden;
+    z-index: 20;
+    padding: 1px;
+}
+
+.albumr {
+    border: 0px solid rgb(102, 102, 102, 0.1);
+    height: 220px;
+    float: left;
+    text-align: center;
+    overflow:hidden;
+    z-index: 20;
+    padding: 1px
+}
+
+.albuml img,
+.albumr img {
+        transition: ease 0.4s;
+        z-index: 10;
+    }
+
+        .albuml img:hover,
+        .albumr img:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
+
+.chitiet {
+    border: 0.5px solid rgb(212, 212, 212);
+    height: auto;
+    color: rgba(0, 0, 0);
+    font-size: 17px;
+    line-height: 25px;
+    padding-top: 10px;
+    float: left;
+}
+
+.chitiet ul {
+    padding-left: 25px;
+}
+
+.chitiet img {
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+}
+
+.tourdltop {
+    height: auto;
+    line-height: 17px;
+    padding-top: 10px;
+    float: left;
+}
+
+.h3 {
+    color: rgb(68, 68, 68);
+    font-size: x-large;
+    text-shadow: 0.5px 0.5px 1px rgb(58, 58, 58);
+    text-align: left;
+}
+
+.tourdltopmr {
+    width: 100%;
+    background-color: rgba(238, 238, 238, 0.5);
+    box-shadow: 2px 2px 2px rgb(102, 102, 102, 0.5);
+    overflow: hidden;
+    margin: 5px
+}
+
+.tourdltopmr:hover {
+    background-color: rgba(238, 238, 238);
+}
+
+.tourdltop .tourdltopmr img {
+    width: 100%;
+    height: 180px;
+    float: left;
+    overflow: hidden
+}
+
+.tourdltop .tourdltopmr img:hover {
+    transition: ease 0.4s;
+    opacity: 0.8;
+}
+
+.tourdltopmr p {
+    font-size: 15px;
+    font-weight: bolder;
+    margin: 5%;
+    padding-top: 1%;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+    .tourdltopmr p:hover {
+        color: black;
+        text-shadow: 0.5px 0.5px 0.5px black;
+    }
+
+.tourdltopmr h4 {
+    margin: -2% 5%;
+    
+    float: left;
+    color: rgb(0, 153, 255);
+    text-shadow: 2px 2px 2px rgb(0, 153, 255, 0.3);
+}
+
+.tourdltopmr h6 {
+    margin-top: 3%;
+    color: red;
+    text-decoration: red line-through;
+    text-shadow: 2px 2px 2px rgba(255, 0, 0, 0.2);
+}
+

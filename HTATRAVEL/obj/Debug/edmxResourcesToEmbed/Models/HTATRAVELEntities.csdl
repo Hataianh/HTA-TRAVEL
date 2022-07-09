@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HTATravelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Tin">
+    <Key>
+      <PropertyRef Name="MaTin" />
+    </Key>
+    <Property Name="MaTin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tieude" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Anh1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Anh2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Anh3" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Anh4" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Anh5" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Ngaydang" Type="DateTime" Precision="0" />
+    <Property Name="Luotxem" Type="Int32" />
+    <Property Name="Noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Tour">
+    <Key>
+      <PropertyRef Name="MaVN" />
+    </Key>
+    <Property Name="MaVN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenVN" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Anh1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Anh2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Anh3" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Anh4" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Anh5" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Giasale" Type="Int32" />
+    <Property Name="Giagoc" Type="Int32" />
+    <Property Name="Luotxem" Type="Int32" />
+    <Property Name="Chuongtrinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TourQT">
+    <Key>
+      <PropertyRef Name="MaQT" />
+    </Key>
+    <Property Name="MaQT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenQT" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Anh1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Anh2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Anh3" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Anh4" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Anh5" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Giasale" Type="Int32" />
+    <Property Name="Giagoc" Type="Int32" />
+    <Property Name="Luotxem" Type="Int32" />
+    <Property Name="Chuongtrinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="MaNguoiDung" />
+    </Key>
+    <Property Name="MaNguoiDung" Type="Int32" Nullable="false" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HoTen" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="HTATravelEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tin" EntityType="Self.Tin" />
+    <EntitySet Name="Tour" EntityType="Self.Tour" />
+    <EntitySet Name="TourQT" EntityType="Self.TourQT" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+  </EntityContainer>
+</Schema>

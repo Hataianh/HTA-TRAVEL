@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_MenuAdmin.cshtml";
+}
+<script src="~/Areas/AngularScript/Tours/Tour.js"></script>
+
+@*@section jsFooter{
+    <script>
+        var editor = CKEDITOR.replace('txt-editor', {
+            customConfig: '~/Scripts/ckeditor/config.js'
+        })
+        $('#btn-select-image').on('click', function (e) {
+            e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $('#txt-Image').val(url);
+            };
+            finder.popup();
+        })
+    </script>
+}*@
+<h2>Create</h2>
+

@@ -1,0 +1,144 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Action("_HeaderCT")
+
+<section class="probootstrap-cover overflow-hidden relative" style="background-image: url('/assets/images/bg_1.jpg');" data-stellar-background-ratio="0.5" id="section-home">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row align-items-center text-center">
+            <div class="col-md">
+                <h2 class="heading mb-2 display-4 font-light probootstrap-animate">Khám phá những địa điểm du lịch<br /><br /> nổi tiếng trong nước và quốc tế</h2>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<div ng-app="HTATravelApp" ng-controller="ChiTietCtrl">
+
+    <div ng-init="LoadQTCT(@ViewBag.MaQT)"></div>
+    <div ng-init="LoadXemNhieu()"></div>
+    <div ng-init="LoadXemNhieuQT()"></div>
+    <div class="probootstrap_section">
+        <div class="container">
+            <div class="row text-center mb-5 probootstrap-animate">
+                <div class="col-md-12">
+                    <h2 class="h2 display-4 border-bottom probootstrap-section-heading" style="line-height: 50px">{{QTCT.TenQT}}</h2>
+                </div>
+            </div>
+
+            <div class="row probootstrap-animate">
+                <div class="col-md-12 mb-4">
+                    <div class="col-md-12 mb-4">
+
+                        <a class="albuml col-md-6" href="{{QTCT.Anh1}}"><img style="height: 100%" src="{{QTCT.Anh1}}" /></a>
+
+                        <a class="albumr col-md-3 mb-2" href="{{QTCT.Anh2}}"><img style=" height: 100%" src="{{QTCT.Anh2}}" /></a>
+
+                        <a class="albumr col-md-3 mb-2" href="{{QTCT.Anh3}}"><img style=" height: 100%" src="{{QTCT.Anh3}}" /></a>
+
+                        <a class="albumr col-md-3 mb-2" href="{{QTCT.Anh4}}"><img style=" height: 100%" src="{{QTCT.Anh4}}" /></a>
+
+                        <a class="albumr col-md-3 mb-1" href="{{QTCT.Anh5}}"><img style=" height: 100%" src="{{QTCT.Anh5}}" /></a>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-12 mb-4">
+                    <div class="chitiet col-md-8 mb-4">
+                        <h3 class="h3">CHƯƠNG TRÌNH TOUR</h3>
+                        @*<p>Xe và hướng dẫn viên <a href="~/Introduce/introduce">HTA Travel</a> đón Quý khách tại 190 Pasteur, Q.3, TP.HCM, khởi hành đến cửa khẩu Mộc Bài. Ăn sáng trên đường. Đến Mộc Bài, Quý khách làm thủ tục qua cửa khẩu. Xe và hướng dẫn viên địa phương đón đoàn và đưa đi dùng bữa trưa tại nhà hàng địa phương . Sau đó, Quý khách tiếp tục lên đường đi Siem Reap. Đến nơi, Quý khách về nhận phòng tại khách sạn 3 sao. Ăn tối và tự do nghỉ ngơi.</p>
+        <b>NGÀY 01: HỒ CHÍ MINH - CAO NGUYÊN BOKOR (SÁNG, TRƯA, TỐI)</b>
+        <p><b>5h00 sáng:</b> Xe và hướng dẫn của Công ty đón khách tại điểm hẹn khởi hành đi <b>Campuchia</b>. Dùng điểm tâm tại <b>Trảng Bàng (đặc sản bánh canh giò heo)</b>. Đến cửa khẩu Mộc Bài làm thủ tục xuất nhập cảnh. Tiếp tục hành trình tới Thủ đô Phnom Penh.  </p>
+        <p><b>Buổi trưa:</b> Đoàn dùng cơm trưa tại nhà hàng sau đó Tiếp tục hành trình chinh phục <b>Cao Nguyên Bokor</b> (độ cao 1080m so với mặt nước biển), với hệ thống đường uốn lượn tuyệt đẹp – từ đây có thể phóng tầm mắt nhìn toàn <b>Vịnh Thailand và Đảo Phú Quốc</b> (Việt Nam)…</p>
+        <p>- Sau đó tiếp tục hành trình đến với thiên đường <b>Cao Nguyên Bokor</b>. Đến Bokor đoàn nhận phòng nghỉ ngơi tại <b>khách sạn Thansur Bokor Highland Resort 5 sao.</b></p>
+        <p><b>Buổi tối:</b> Đoàn dùng <b>cơm tối tại khách sạn Thunsar Bokor 5 sao.</b></p>
+        <p>Quý khách tự do khám phá cao nguyên Bokor và thử vận may tại Casino.</p>
+        <b>NGÀY 02: BOKOR -  SIHANOUK VILLE - KOHRONG (SÁNG, TRƯA, TỐI)</b>
+        <p><b>Buổi sáng:</b> Dùng bữa sáng buffet tại khách sạn. Làm thủ tục trả phòng.</p>
+        <p>Đoàn tham quan: nơi nghỉ và sinh hoạt của <b>Vua Shihanouk</b> từng đi săn bắn tại nơi đây, chụp hình <b>Cung điện - Casino, Nhà Thờ Công Giáo</b> do thực dân Pháp xây dựng những năm 1917. Đặc biệt viếng Chùa Năm Thuyền – nghe kể truyền thuyết của <b>Hoàng Tử Preah Thom và Công chúa Thủy Cung Nagani</b> – nơi khởi đầu của nền văn minh Khmer…</p>
+        <p>Sau đó xe đưa đoàn đến thành phố biển <b>Sihanouk Ville.</b> Đến Shihanouk đoàn dùng cơm trưa.</p>
+        <p>Sau đó xe đưa Quý khách ra cảng khởi hành đến vui chơi tại đảo <b>Koh Rong Saloem</b>, được mệnh danh là bãi biển đẹp nhất Đông Nam Á. Đến đây, Quý khách tự do tắm biển khám phá đảo Kohrong Saloem.</p>
+        <p><b>16h00:</b> Quý khách lên tàu về lại thành phố biển <b>Shihanouk Ville</b>. Về khách sạn nhận phòng.</p>
+        <p>Đoàn dùng cơm tối, sau đó tự do dạo biển ngắm nhìn những tia pháo hoa vụt sáng trên bầu trời hoặc lồng đèn được đốt sáng thả lên trời… Nghỉ đêm tại Sihanouk.</p>
+        <img src="{{QTCT.Anh3}}"/>
+        <b>NGÀY 03: SHIHANOUK VILLE – PHNOM PENH (SÁNG, TRƯA, CHIỀU)</b>
+        <p><b>7h00:</b> Dùng bữa sáng Buffet tại khách sạn. Làm thủ tục trả phòng.</p>
+        <p>- Sau đó đoàn khởi hành về lại thủ đô Phnom Penh. Tham quan, mua sắm tại chợ Campot và khởi hành về Phnompenh.</p>
+        <p><b>Buổi trưa:</b> Đoàn đến Phnom penh dùng cơm trưa. Sau đó về khách sạn nhận phòng nghỉ ngơi.</p>
+        <p><b>Buổi chiều:</b> Đoàn dùng bữa tối. Sau đó tham quan và thử vận may tại Casino Naga World 5 Sao sang trọng nhất Cambodia.Về khách sạn, tự do khám phá thủ đô Phnom Penh.</p>
+        <b> NGÀY 04: PHNOM PENH – HỒ CHÍ MINH (SÁNG, TRƯA)</b>
+        <p><b>7h00:</b> Dùng bữa sáng Buffet tại khách sạn, làm thủ tục trả phòng. Sau đó, tham quan chợ Mới mua đặc sản Campuchia.</p>
+        <p>Đoàn Khởi hành về lại Tp. Hồ Chí Minh. HDV Công Ty tiễn khách về điểm khởi hành ban đầu. Kết thúc tour, chia tay và hẹn gặp lại Quý khách.</p>
+        <b>CHÍNH SÁCH TOUR</b>
+        <p>
+            <b>1- Khách mua trực tiếp tại quầy:</b><br>
+            - Nhóm từ 1- 4 khách: được giảm ngay <b>200.000đ/khách</b><br>
+            - Nhóm từ 5- 8 khách: được giảm ngay<b> 300.000đ/khách</b><br>
+            - Nhóm trên 8 khách: được giảm ngay<b> 400.000đ/khách</b>
+        </p>
+        <p>
+            <b> 2- Khách mua và thành toán Online</b><br>
+            - Khách mua tour và thanh toán online trên <a href="https://ant-du-lich.bizwebvietnam.net">ant-du-lich.bizwebvietnam.net<b> </b></a>được giảm ngay <b>300.000đ/khách</b>
+        </p>
+        <p>
+            <b>* Giá tour bao gồm:</b><br>
+            - Chi phí xe máy lạnh phục vụ theo chương trình.<br>
+            - Chi phí khách sạn theo tiêu chuẩn 3 sao (2 khách/phòng, khách thứ 3 dùng extra bed hoặc phụ thu để ở phòng đơn)<br>
+            - Chi phí ăn - uống theo chương trình.<br>
+            - Chi phí Hướng dẫn viên tiếng Việt suốt tuyến.<br>
+            - Quà tặng: nón cao cấp, nước suối, khăn lạnh
+        </p>
+        <p>
+            <b> * Giá tour không bao gồm:  </b><br>
+            - Chi phí visa nhập cảnh Campuchia, visa tái nhập Việt Nam - Trong trường hợp khách chỉ có visa một lần vào Việt Nam).<br>
+            - Chi phí cá nhân - giặt ủi - điện thoại - chi phí phát sinh ngoài chương trình.<br>
+            - Tiền bồi dưỡng cho hướng dẫn viên địa phương và tài xế (70.000đ/khách/ngày)
+        </p>
+        <b>THÔNG TIN HƯỚNG DẪN</b>
+        <p>
+            <b>* Vé trẻ em:  </b><br>
+            - Trẻ em dưới 2 tuổi: phụ thu 350.000đ phí xuất cảnh.<br>
+            - Trẻ em từ 2 đến 6 tuổi: Tính 50% giá tour (Ngủ chung giường với bố mẹ).<br>
+            - Trẻ em từ trên 6 đến 11 tuổi: Tính 75% giá tour (Ngủ chung giường với bố mẹ).<br>
+            - Trẻ em trên 11 tuổi: Tính 100% giá tour.<br>
+            - 100% Chi phí Visa nhập cảnh Campuchia và tái nhập VN (nếu có).
+        </p>*@
+                        <a href="{{QTCT.Anh4}}"><img style="height: 100%" src="{{QTCT.Anh4}}" /></a>
+                        {{QTCT.Chuongtrinh}}
+                        <a href="{{QTCT.Anh2}}"><img style="height: 100%" src="{{QTCT.Anh2}}" /></a>
+                    </div>
+
+                    <div class="tourdltop col-md-4 mb-4">
+                        <h3 class="h3">TOUR DU LỊCH NỔI BẬT</h3>
+                        <div ng-repeat="a in listXemNhieu | limitTo: 4" class="tourdltopmr">
+                            <a href="/DiemDen/VNCT/?MaVN={{a.MaVN}}">
+                                <img src="{{a.Anh1}}">
+                            </a>
+                            <a href="/DiemDen/VNCT/?MaVN={{a.MaVN}}">
+                                <p>{{a.TenVN}}</p>
+                            </a>
+                            <h4><b>{{a.Giasale | currency: "đ":false}}</b></h4>
+                            <h6><b>{{a.Giagoc | currency: "đ":false}}</b></h6>
+                        </div>
+                        <div ng-repeat="a in listXemNhieuQT | limitTo: 3" class="tourdltopmr">
+                            <a href="/DiemDen/QTCT/?MaQT={{a.MaQT}}">
+                                <img src="{{a.Anh1}}">
+                            </a>
+                            <a href="/DiemDen/QTCT/?MaQT={{a.MaQT}}">
+                                <p>{{a.TenQT}}</p>
+                            </a>
+                            <h4><b>{{a.Giasale | currency: "đ":false}}</b></h4>
+                            <h6><b>{{a.Giagoc | currency: "đ":false}}</b></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HTATravelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Tin">
+    <Key>
+      <PropertyRef Name="MaTin" />
+    </Key>
+    <Property Name="MaTin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tieude" Type="nvarchar" MaxLength="150" />
+    <Property Name="Anh1" Type="varchar" MaxLength="250" />
+    <Property Name="Anh2" Type="varchar" MaxLength="250" />
+    <Property Name="Anh3" Type="varchar" MaxLength="250" />
+    <Property Name="Anh4" Type="varchar" MaxLength="250" />
+    <Property Name="Anh5" Type="varchar" MaxLength="250" />
+    <Property Name="Ngaydang" Type="date" />
+    <Property Name="Luotxem" Type="int" />
+    <Property Name="Noidung" Type="ntext" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="Tour">
+    <Key>
+      <PropertyRef Name="MaVN" />
+    </Key>
+    <Property Name="MaVN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenVN" Type="nvarchar" MaxLength="150" />
+    <Property Name="Anh1" Type="varchar" MaxLength="250" />
+    <Property Name="Anh2" Type="varchar" MaxLength="250" />
+    <Property Name="Anh3" Type="varchar" MaxLength="250" />
+    <Property Name="Anh4" Type="varchar" MaxLength="250" />
+    <Property Name="Anh5" Type="varchar" MaxLength="250" />
+    <Property Name="Giasale" Type="int" />
+    <Property Name="Giagoc" Type="int" />
+    <Property Name="Luotxem" Type="int" />
+    <Property Name="Chuongtrinh" Type="ntext" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="TourQT">
+    <Key>
+      <PropertyRef Name="MaQT" />
+    </Key>
+    <Property Name="MaQT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenQT" Type="nvarchar" MaxLength="150" />
+    <Property Name="Anh1" Type="varchar" MaxLength="250" />
+    <Property Name="Anh2" Type="varchar" MaxLength="250" />
+    <Property Name="Anh3" Type="varchar" MaxLength="250" />
+    <Property Name="Anh4" Type="varchar" MaxLength="250" />
+    <Property Name="Anh5" Type="varchar" MaxLength="250" />
+    <Property Name="Giasale" Type="int" />
+    <Property Name="Giagoc" Type="int" />
+    <Property Name="Luotxem" Type="int" />
+    <Property Name="Chuongtrinh" Type="ntext" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'HTATravel.dbo.Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="MaNguoiDung" />
+    </Key>
+    <Property Name="MaNguoiDung" Type="int" Nullable="false" />
+    <Property Name="TaiKhoan" Type="varchar" MaxLength="50" />
+    <Property Name="MatKhau" Type="varchar" MaxLength="100" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="150" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="SDT" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="HTATravelModelStoreContainer">
+    <EntitySet Name="Tin" EntityType="Self.Tin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tour" EntityType="Self.Tour" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TourQT" EntityType="Self.TourQT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Users].[MaNguoiDung] AS [MaNguoiDung], 
+    [Users].[TaiKhoan] AS [TaiKhoan], 
+    [Users].[MatKhau] AS [MatKhau], 
+    [Users].[HoTen] AS [HoTen], 
+    [Users].[Email] AS [Email], 
+    [Users].[SDT] AS [SDT]
+    FROM [dbo].[Users] AS [Users]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

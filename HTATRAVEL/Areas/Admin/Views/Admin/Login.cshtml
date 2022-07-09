@@ -1,0 +1,65 @@
+﻿
+@{
+
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Đăng nhập</title>
+    <link href="~/assets/admin/css/login.css" rel="stylesheet" />
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/AngularScript/login.js"></script>
+</head>
+<body ng-app="HTATravelApp">
+    <div ng-controller="LoginCtrl">
+        <form action="/Admin/admin" class="login-form" method="post">
+            <div class="validation-summary-valid error" data-valmsg-summary="true">
+                <ul>
+                    <li style="display:none"></li>
+                </ul>
+            </div>        <h1>Đăng nhập</h1>
+            <div class="txtb">
+                <input id="TaiKhoan" type="text" class="form-control" placeholder="Tài khoản" />
+
+            </div>
+            <div class="txtb">
+                <input id="MatKhau" type="password" class="form-control" placeholder="Mật khẩu" />
+
+            </div>
+            <div style="margin-bottom:30px;">
+                <input data-val="true" data-val-required="The RememberMe field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
+                Nhớ mật khẩu?
+            </div>
+            <div><button type="submit" class="logbtn" ng-click="Login()">Đăng nhập</button></div>
+
+        </form>
+    </div>
+
+    <script src="~/assets/admin/js/jquery.2.1.1.min.js"></script>
+
+    <!-- <![endif]-->
+    <!--[if IE]>
+    <script src="~/assets/admin/js/jquery.1.11.1.min.js"></script>
+    <![endif]-->
+    <!--[if !IE]> -->
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='~/assets/admin/js/jquery.min.js'>" + "<" + "/script>");
+    </script>
+
+    <!-- <![endif]-->
+    <!--[if IE]>
+    <script type="text/javascript">
+     window.jQuery || document.write("<script src='~/assets/admin/js/jquery1x.min.js'>"+"<"+"/script>");
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+        if ('ontouchstart' in document.documentElement) document.write("<script src='~/assets/admin/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+    </script>
+
+
+</body>
+</html>
